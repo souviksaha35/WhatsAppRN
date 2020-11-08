@@ -1,0 +1,22 @@
+type Query {
+    user(id: ID!): User
+}
+
+type Mutation {
+    users(name: String!, imageUri: String!, status: String): User
+    chatRoomUser(userId: ID!, chatRoomID: ID!): ChatRoomUser
+}
+
+type User {
+    id: ID!
+    name: String!
+    imageUri: String!
+    status: String
+}
+
+type ChatRoomUser {
+    id: ID!
+    userID: ID!
+    chatRoomID: ID!
+    
+}
